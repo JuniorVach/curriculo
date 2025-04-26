@@ -6,25 +6,30 @@ body, html{
 }
 
 
-.geral-container{
+#geral-container{
     height: 100%;
     display: flex;
 }
 
 
-.informacoes-pessoais{
+#informacoes-pessoais{
     background-color: rgb(28, 95, 81);
     display: flex;
     flex-direction: column;
-    height: 100%;
+    /* height: 100%; */
     width: 30%;
     
 }
 
+#outras-informacoes p{
+    text-align: justify;
+    font-size: 20px;
+}
+
 
 .foto-perfil{
-    height: 33.3%;
-    width: 100%;
+    /* height: 33.3%; */
+    /* width: 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,54 +45,35 @@ body, html{
 }
 
 
-.contato{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-.icones-contato{
-    display: inline-block; 
-    font-size: 13px;
-    padding-left: 10px;
-}
-.icones-contato span{
-    font-size: 15px;
-    padding-left: 2px;
-}
-
-
-.habilidades{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    
-}
-.icones-habilidades{
-    display: inline-block;
-    font-size: 13px;
-    padding-left: 10px;
-}
-.icones-habilidades span{
-    font-size: 15px;
-    padding-left: 5px;
-}
-
-
+.contato,
+.habilidades,
 .informacoes-adicionais{
     display: flex;
     flex-direction: column;
     gap: 15px;
-}
-.icones-informacoes{
-    display: inline-block;
-    font-size: 13px;
-    padding-left: 10px;
-}
-.icones-informacoes span{
-    font-size: 15px;
-    padding-left: 5px;
+    padding-bottom: 10px;
 }
 
+.icones-contato,
+.icones-habilidades,
+.icones-informacoes{
+    display: inline-block; 
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.icones-contato span,
+.icones-habilidades span,
+.icones-informacoes span{
+    font-size: 17px;
+    padding-left: 2px;
+}
+
+.icones-contato a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+}
 
 .contato h2,
 .habilidades h2,
@@ -96,14 +82,14 @@ body, html{
     margin: 0;
     padding: 0;
     padding-top: 2px;
+    font-size: 20px;
 }
-
 
 .contato,
 .habilidades,
 .informacoes-adicionais{
-    height: 22.2%;
-    width: 90%;
+    /* height: 22.2%; */
+    /* width: 90%; */
     font-size: 13px;
     color: #fff;
     border-top: 2px solid #fff;
@@ -112,13 +98,17 @@ body, html{
     
 }
 
+/* .habilidades{
+    height: 33%;
+} */
+
 
 
 /* ----------------------------------------- */
 
-.outras-informacoes{
+#outras-informacoes{
     background-color: #fff;
-    height: 100%;
+    /* height: 100%; */
     width: 70%;
     display:flex;
     flex-direction: column;
@@ -126,8 +116,8 @@ body, html{
 
 
 .my-name{
-    height: 19%;
-    width: 95%;
+    /* height: 19%; */
+    /* width: 95%; */
     margin-left: 2%;
     margin-right: 3%;
     border-bottom: 5px solid #000;
@@ -136,7 +126,7 @@ body, html{
     color: rgb(28, 95, 81);
     padding-left: 7%;
     padding-top: 25px;
-    font-size: 50px;
+    font-size: 55px;
 }
 
 
@@ -146,29 +136,14 @@ body, html{
     padding: 0;
     margin:0;
     padding-top: 2px; 
+    font-size: 25px;
 }
-
-
-.experiencia li{
-    padding: 0;
-    margin: 0;
-    margin-top: 10px;
-}
-
-
-.formacao p{
-    margin: 0;
-    padding: 0;
-    margin-top: 15px;
-
-}
-
 
 .resumo,
 .experiencia,
 .formacao{
-    height: 27%;
-    width: 90%;
+    /* height: 27%; */
+    /* width: 90%; */
     margin-left: 2%;
     margin-right: 8%;
     border-top: 2px solid #000; 
@@ -181,162 +156,117 @@ body, html{
 
 /* ----------------------------------------- */
 
+@media screen and (min-width: 320px) and (max-width: 480px){
+    #geral-container{
+        display: flex;
+        flex-direction: column;
+        
+    }
 
-@media screen and (max-width: 1440px){
+    #informacoes-pessoais{
+        width: 100%;
+        display: inline-block;
+    }
+
+    #outras-informacoes{
+        width: 100%;
+        display: inline-block;
+    }
+    .my-name h1{
+        font-size: 53px;
+    }
+
+    .informacoes-adicionais{
+        margin-bottom: 40px;
+    }
+}
+
+
+
+
+@media (min-width: 481px) and (max-width: 768px){
+    #geral-container{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    #informacoes-pessoais{
+        width: 100%;
+        display: inline-block;
+    }
+
+    #outras-informacoes{
+        width: 100%;
+        display: inline-block;
+    }
+
+    .informacoes-adicionais{
+        margin-bottom: 40px;
+    }
+}
+
+
+
+
+@media (min-width: 769px) and (max-width: 1024px) { 
+   #informacoes-pessoais{
+        width: 50%;
+        height: 139.2%;
+   }
+}
+
+
+
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    #informacoes-pessoais{
+        width: 35%;
+        height: 110%;
+   }
+}
+
+
+
+
+@media (min-width: 1441px) {
+    #informacoes-pessoais{
+        width: 35%;
+    }
+
     .contato h2,
     .habilidades h2,
     .informacoes-adicionais h2{
-        font-size: 23px;
+        font-size: 25px;
     }
 
     .icones-contato,
     .icones-habilidades,
     .icones-informacoes{
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .icones-contato span,
     .icones-habilidades span,
     .icones-informacoes span{
-        font-size: 18px;
+        font-size: 22px;
     }
 
+    .contato a{
+        font-size: 22px;
+    }
+
+    .my-name h1{
+        font-size: 70px;
+    }
 
     .resumo h2,
     .experiencia h2,
     .formacao h2{
         font-size: 30px;
     }
-    .resumo p,
-    .experiencia p,
-    .formacao p{
-        font-size: 20.5px;
-    }
-
-
-}
-
-
-
-
-@media screen and (max-width: 1024px){
-    .contato h2,
-    .habilidades h2,
-    .informacoes-adicionais h2{
-        font-size: 16px;
-    }
-
-    .icones-contato,
-    .icones-habilidades,
-    .icones-informacoes{
-        font-size: 13px;
-    }
-
-    .icones-contato span,
-    .icones-habilidades span,
-    .icones-informacoes span{
-        font-size: 15px;
-    }
-
-    .resumo h2,
-    .experiencia h2,
-    .formacao h2{
-        font-size: 25px;
-    }
-
-    .resumo p,
-    .experiencia p,
-    .formacao p{
-        font-size: 18px;
-    }
-}
-
-
-
-
-@media screen and (max-width: 768px){
-    .informacoes-pessoais{
-        width: 40%;
-    }
-
-
-    .resumo h2,
-    .experiencia h2,
-    .formacao h2{
-        font-size: 23px;
-    }
-
-    .resumo p,
-    .experiencia p,
-    .formacao p{
-        font-size: 16px;
-    }
-}
-
-
-
-
-@media screen and (max-width: 425px){
-    .geral-container{
-        display: flex;
-        flex-direction: column;
-        
-    }
-
-    .informacoes-pessoais{
-        width: 100%;
-        display: inline-block;
-    }
-
-    .outras-informacoes{
-        width: 100%;
-        display: inline-block;
-    }
     
-    .imagem img{
-        width: 100%;
-        height: 180px;
-        padding-top: 9px;
-    }
-
-    .informacoes-adicionais,
-    .habilidades,
-    .contato{
-        padding-bottom: 10px;
-        padding-top: 5px;
-    }
-
-    .resumo,
-    .experiencia,
-    .formacao{
-        padding-bottom: 10px;
-        padding-top: 5px; 
-    }
-}
-
-
-
-
-@media screen and (max-width: 375px){
-    .experiencia{
-        padding-bottom: 25px;
-    }
-}
-
-
-
-
-@media screen and (max-width: 320px){
-    .experiencia h2,
-    .formacao h2{
-        font-size: 19.5px;
-    }
-
-    .resumo{
-        padding-bottom: 20px;
-    }
-
-    .experiencia{
-        padding-bottom: 50px;
+    #outras-informacoes p{
+        font-size: 25px;
     }
 }
