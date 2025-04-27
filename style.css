@@ -162,6 +162,14 @@ body, html{
     .informacoes-adicionais{
         margin-bottom: 40px;
     }
+
+    .experiencia h2{
+        font-size: 19.5px;
+    }
+
+    .formacao h2{
+        font-size: 22px;
+    }
 }
 
 
